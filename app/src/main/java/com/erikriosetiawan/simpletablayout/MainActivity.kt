@@ -1,11 +1,11 @@
 package com.erikriosetiawan.simpletablayout
 
-import android.content.res.ColorStateList
 import android.graphics.Color
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.erikriosetiawan.simpletablayout.databinding.ActivityMainBinding
+import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
 class MainActivity : AppCompatActivity() {
@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         binding.tabLayout.apply {
             setTabRippleColorResource(android.R.color.white)
             setBackgroundColor(Color.TRANSPARENT)
+            setSelectedTabIndicatorColor(Color.WHITE)
         }
 
         binding.viewPager2.adapter = MainPagerAdapter(this, fragments)
