@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">SimpleTabLayout</string>
     <string name="order_fragment">Order Fragment</string>
+    <string name="pending_fragment">Pending Fragment</string>
 </resources>
