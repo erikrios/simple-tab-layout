@@ -18,8 +18,7 @@ class MainActivity : AppCompatActivity() {
             mutableListOf(OrderFragment(), PendingFragment(), DeliveredFragment())
         binding.viewPager2.adapter = MainPagerAdapter(this, fragments)
         TabLayoutMediator(binding.tabLayout, binding.viewPager2) { tab, position ->
-            val title = listOf("Order", "Pending", "Delivered")
-            tab.text = title[position]
+            tab.text = listOf("Order", "Pending", "Delivered")[position]
         }.attach()
     }
 }
