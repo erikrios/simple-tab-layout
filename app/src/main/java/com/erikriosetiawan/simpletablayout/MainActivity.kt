@@ -1,5 +1,7 @@
 package com.erikriosetiawan.simpletablayout
 
+import android.content.res.ColorStateList
+import android.graphics.Color
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
@@ -16,6 +18,11 @@ class MainActivity : AppCompatActivity() {
 
         val fragments =
             mutableListOf(OrderFragment(), PendingFragment(), DeliveredFragment())
+        binding.tabLayout.apply {
+            setTabRippleColorResource(android.R.color.white)
+            setBackgroundColor(Color.TRANSPARENT)
+        }
+
         binding.viewPager2.adapter = MainPagerAdapter(this, fragments)
         TabLayoutMediator(binding.tabLayout, binding.viewPager2) { tab, position ->
             tab.text = listOf("Order", "Pending", "Delivered")[position]
